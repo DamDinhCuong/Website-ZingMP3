@@ -109,6 +109,10 @@
     white-space: nowrap;
     text-decoration: none;
     color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-left: 20px;
+    transform: translateY(1px)
 }
 
 .sidebar__item-link:hover {
@@ -129,15 +133,9 @@
     height: 24px;
     font-size: 2.2rem;
     display: inline-block;
+    margin-right: 10px;
 }
 
-.sidebar__item-link span {
-    display: inline-block;
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding-left: 10px;
-    transform: translateY(1px)
-}
 
 .sidebar__item-link .sidebar__link-topic {
     padding-left: 0;
@@ -196,6 +194,10 @@
     background: #555;
 }
 
+.button i {
+    font-size: 1rem;
+    margin-right: 10px;
+}
 
 .sidebar__login {
     display: flex;
@@ -321,12 +323,14 @@
     width: 100%;
     display: none;
     padding: 10px 10px;
-    justify-content: center;
+    align-items:center;
+    
 }
 
 .sidebar__expand-btn {
     width: 50px;
     height: 50px;
+    margin: auto;
     display: block;
     cursor: pointer;
     border-radius: 50%;
@@ -740,8 +744,8 @@
 /* App container Header */
 .app__header {
     width: 100%;
-    padding-top: 85px;
     position: relative;
+    margin-bottom: 300px;
 }
 
 .app__header-overlay {
@@ -879,10 +883,14 @@
 
 
 /* Content CSS */
+
+.content-body {
+    display: flex;
+}
+
 .content {
     display: flex;
     flex-direction: column;
-    padding: 205px 0 0;
 }
 
 .content__navbar {
@@ -996,7 +1004,7 @@
 
 .container__header-subtitle {
     height: 100%;
-    display: none;
+    /* display: none; */
     font-size: 2rem;
     align-items: center;
     line-height: 2.4rem;
@@ -1203,7 +1211,7 @@ h2.playlist__list-name {
 
 .playlist__add {
     background: linear-gradient(33deg, #5a1eae -7%, #ce267a 117%);
-    height: 230px;
+    height: 100%;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -1222,8 +1230,7 @@ h2.playlist__list-name {
 }
 
 .playlist__img {
-    width: 162px;
-    height: 162px;
+    width: 100%;
     border-radius: 6px;
 }
 
@@ -1265,6 +1272,7 @@ h2.playlist__list-name {
     margin-bottom: 20px;
     border-radius: 6px;
     overflow: hidden;
+    padding: 10px 5px;
     transition: transform linear 0.2s;
 }
 
@@ -1274,8 +1282,7 @@ h2.playlist__list-name {
 }
 
 .mv__img {
-    width: 290px;
-    height: 164px;
+    width: 100%;
     border-radius: 6px;
     margin-top: 4px;
 }
@@ -1331,11 +1338,11 @@ h2.playlist__list-name {
 }
 
 .artist__avt {
-    width: 164px;
-    height: 164px;
+    width: 100%;
     border-radius: 50%;
     transition: all 0.5s;
     transform: scale(1);
+    margin-top: 20px;
 }
 
 .artist__avt:hover {
@@ -1423,6 +1430,10 @@ h2.playlist__list-name {
     width: 100%;
 }
 
+.playlist__list.active {
+    background-color: var(--bg-content-color);
+}
+
 .playlist__header {
     display: flex;
     justify-content: space-between;
@@ -1446,4 +1457,419 @@ h2.playlist__list-name {
 }
 
 
+
+/* Tab explore */
+
+.app__container-content {
+    height: 100%;
+    padding: 70px 4vw 0;
+}
+
+.explore__highlights {
+    margin-top: 20px;
+}
+
+.explore__img {
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.5s;
+    transform: scale(1);
+}
+.explore__img:hover {
+    transform: scale(1.1);
+}
+
+
+.explore__item-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+.explore__header {
+    display: flex ;
+    align-items: center;
+}
+
+.explore__header:hover .container__header-subtitle,
+.explore__header:hover .container__header-icon,
+.explore__item-link:hover {
+    color: var(--link-text-hover);
+}
+
+.container__header-subtitle {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.explore__header i {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 1px;
+}
+
+.explore__item {
+    transform: scale(0.9);
+    transition: all 0.3s;
+    padding: 10px 0;
+}
+
+.explore__item:hover {
+    transform: scale(1,);
+}
+
+.explore__item-content {
+    margin-top: 5px;
+}
+
+.explore__item-link {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.explore__item-subtitle {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.radio__img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Radio */
+
+
+.radio__header {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.radio__avt-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.radio__media-explicatio {
+    font-size: 14px;
+    color: #FFFFFF80;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.radio__media-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin: 5px 0;
+}
+
+.radio__item {
+    position: relative;
+}
+
+.radio__item-img {
+    width: 100%;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+.radio__item-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    top: 68px;
+    right: -10px;
+}
+
+.radio__item-title {
+    width: 40px;
+    background-color: red;
+    display: block;
+    text-align: center;
+    padding: 0px 10px;
+    border-radius: 8px;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 34px;
+    line-height: -7px;
+}
+
+.radio__item-header {
+    color: var(--text-color);
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.radio__item-info {
+    text-align: center;
+}
+
+.radio__item-header:hover {
+    color: var(--link-text-hover);
+    text-decoration: none;
+}
+
+.radio__item-info span {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+/* chart */
+
+.charts__header {
+    display: flex;
+    align-items: center;
+}
+
+.charts__title {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.charts__icon {
+    font-size: 30px;
+    padding: 5px;
+    color: #fff;
+    border: 1px solid #ed2b91;
+    border-radius: 50%;
+    background-color: #ed2b91;
+}
+
+
+/* List */
+.container__playlist {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.playlist__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 5px 0;
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 1px solid #cccccc69;
+    margin-bottom: 20px;
+}
+
+
+
+.playlist__list:hover {
+    background-color: var(--bg-content-color);
+}
+
+.playlist__list-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+
+.playlist__list-title {
+    margin-right: 12px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+h2.playlist__list-name {
+    margin: 0;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 20px;
+    margin-bottom: 2px;
+}
+
+.playlist__list-author {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.playlist__list-times {
+    color: var(--text-secondary);
+    width: 200px;
+}
+
+.playlist__song-btn {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.playlist__song-option {
+    display: flex;
+    width: 112px;
+    justify-content: space-between;
+}
+
+.container__move-btn {
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.container__move-btn:hover {
+    color: var(--link-text-hover);
+}
+
+.btn-right {
+    margin-left: 20px;
+}
+
+.number__rank {
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 5px #b0b03e;
+    position: relative;
+    margin-right: 10px;
+    width: 10%;
+    text-align: center;
+}
+
+.number__rank::after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 1px;
+    top: 50%;
+    right: 2px;
+    background-color: var(--text-secondary);
+}
+
+.number__rank--color {
+    text-shadow: 0 0 5px rgb(255, 0, 0);
+}
+
+.number__rank--color2 {
+    text-shadow: 0 0 5px #0383ff;
+}
+
+.number__rank--color3 {
+    text-shadow: 0 0 5px #3cfd03;
+}
+
+
+/* Follow */
+
+.follow__item-img {
+    width: 100%;
+}
+
+.col {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.artist {
+    background-color: #2f2739;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 1px 2px 2px rgb(77, 77, 77);
+    margin: 16px 0;
+}
+
+.artist__header-info {
+    display: flex;
+    align-items: center;
+}
+
+.media {
+    margin: 5px 0 0 10px;
+    
+}
+
+.media__info {
+    display: flex;
+    font-size: 16px;
+    color: #fff;
+}
+
+.artist__img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.media__date {
+    font-size: 12px;
+    margin-top: 3px;
+    color: #FFFFFF80;
+}
+
+
+.media__follow {
+    display: flex;
+    align-items: center;
+    color: #dadada;
+}
+
+.media__follow-icon {
+    font-size: 5px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.artist__header-content {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #fff;
+    width: 85%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.artist__body-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.artist__footer {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.artist__footer-show {
+    display: flex;
+}
+
+.artist__footer-show:first-child {
+    margin-right: 20px;
+}
+
+.artist__footer-icon {
+    margin-right: 5px;
+}
 

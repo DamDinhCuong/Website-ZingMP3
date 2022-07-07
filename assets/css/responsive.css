@@ -1,49 +1,8 @@
 /* Mobie - tablet */
 @media (max-width: 1023px) {
-    :root {
-        --header-height: 68px;
-        --nav-height: 0;
-    }
-    .hide-on-tablet-mobie {
+    .hide-on-tablet-mobile {
         display: none;
     }
-    
-    .header {
-        position: fixed;
-        z-index: 10;
-        width: 100%;
-        top: 0;
-    }
-    
-    .header__cart-list {
-        position: fixed;
-        top: var(--header-height);
-        right: 0;
-        width: 100%;
-        padding: 0 calc((100% - 644px)/2);
-    }
-
-    .header__cart-list::after {
-        display: none;
-    }
-
-    .app__container {
-        margin-top: calc(var(--header-height) + 10px);
-    }
-
-    .header__sort-bar {
-        display: flex;
-    }
-
-    .app_content {
-        margin-top: 8px;
-    }
-
-    .mobie-category {
-        display: flex;
-    }
-
-    
     
 }
 
@@ -52,128 +11,223 @@
     .hide-on-tablet {
         display: none;
     }
-    .header__cart {
-        width: 80px;
-        text-align: right;
+
+    .header {
+        width: 90%;
     }
 
-    .header-with-search {
-        padding-top: 12px;
+    .app__sidebar {
+        width: 10%;
+        background-color: #6f25aa;
+   
     }
 
-    .header__cart-list-items {
-        max-height: 35vh;
+    .sidebar__small-logo {
+        display: block;
+    }
+
+    .sidebar__item-link {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .sidebar__item-link i{
+        width: 100%;
+        height: 100%;
+        margin-right: 0px;
+    }
+
+    .sidebar__expand {
+        display: block;
+    }
+
+    .sidebar__menu-link span {
+        display: none;
+    }
+
+    .sidebar__subnav-menu { 
+        font-size: 14px;
+        align-items: center;
+    }
+
+    .sidebar__menu-item {
+        height: 40px;
+        margin: 10px;
+    }
+
+    .sidebar__menu-item.menu-header {
+        display: none;
+    }
+
+    .radio__item-title {
+        position: absolute;
+        top: 140px;
+        left: 55px;
+    }
+
+    .radio__item-logo {
+        top: 100px;
     }
 }
 
 /* Mobie */
 
 @media (max-width: 739px) {
-    .hide-on-mobie {
+    .hide-on-mobile {
         display: none;
     }
 
-    .header-with-search {
-        justify-content: space-between;
-    }
-
-    .header__cart,
-    .header__logo {
-        width: unset;
-    }
-
-    .pagination-item {
-        margin: 0 2px;
-    }
-
-    .pagination-item__link {
-        min-width: 32px;
-        font-size: 1.5rem;
-    }
-
-    .header__search {
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: var(--header-height);
-        height: 42px;
-        z-index: 1;
-        box-shadow: 0 1px 2px rgb(0 ,0 ,0, 0.1);
-        padding: 0 16px;
-        animation: mobieSearch linear 0.3s;
-        display: none;
-    }
-
-    @keyframes mobieSearch {
-        from {
-            opacity: 0;
-            top: calc(var(--header-height) / 2);
-        }
-        to {
-            opacity: 1;
-            top: var(--header-height);
-        }
-    }
-    .header__search-history {
-        position: fixed;
-        top: calc(var(--header-height) + var(--nav-height));
+    .header {
         width: 100%;
-        left: 0;
-        box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+        padding: 0px;
     }
-
-    .header__mobie-category-icon {
-        display: block;
-    }
-    .header__mobie-search {
-        display: block;
-    }
-
     
-
-    .app_content {
-        margin: 0 4px;
+    .header__with-search {
+        margin: 0 5px;
     }
 
-    .footer__content {
-        padding: 0 16px;
+   
+    .content__navbar-menu {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
     }
 
-    .home-product-item__lable {
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        position: relative;
-        top: -10px;
-    }
-    .home-product-item__percent{
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        position: relative;
-        top: 0px;
+    .content__navbar-item {
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        min-width: unset;
     }
 
-    .header__logo-img {
-        width: 100px;
+    .playlist__list {
+        margin: 15px 0 0 10px;
     }
 
-    .header-with-search {
-        height: var(--header-height);
-        margin: 0 10px;
+    .playlist__list-title {
+        width: 100%;
+        margin-left: 15px;
     }
 
-    .mb-btn {
-        order: -1;
+    .playlist__song-option {
+        width: 30px;
     }
 
-    .footer__heading {
+    .playlist__heading  {
+        font-size: 12px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    .playlist__add-icon {
+        font-size: 30px;
+    }
+
+    .playlist__add-text {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .artist__name,
+    .artist__number {
+        font-size: 10px;
+    }
+
+    .artist__info {
         text-align: center;
     }
+    .artist__follow-btn {
+        font-size: 10px; 
+        padding: 5px 10px;
+    }
 
-    .footer-item__link {
-        justify-content: center;
+    .app__sidebar-mb {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .sidebar__nav-list {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--layout-bg);
+    }
+
+    .sidebar__nav {
+        margin-bottom: 0;
+    }
+
+    .sidebar__item-link {
+        padding: 5px 10px;
+        font-size: 10px;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .sidebar__nav-item {
+        width: 20%;
+    }
+   
+    .sidebar__item-link i {
+        font-size: 15px;
+        margin-right: 0;
+    }
+
+   .artist--container {
+        margin-bottom: 30px;
+   }
+
+   .radio__img {
+        margin-bottom: 50px;
+   }
+   
+   .explore__item-link {
+        font-size: 12px;
+   }
+   .explore__item-subtitle {
+        font-size: 10px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+   }
+
+   .radio__item-logo {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        top: 60px;
+    }
+
+    .radio__item-title {
+        top: 95px;
+        left: 31px;
+    }
+
+    .number__rank {
+        font-size: 25px;
+        width: 25%;
     }
     
-    .footer__download {
-        justify-content: center;
+    .playlist__list-img {
+        margin-left: 20px;
+    }
+
+    .number__rank::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        top: 50%;
+        right: -20px;
+        background-color: var(--text-secondary);
     }
 }
